@@ -24,7 +24,6 @@ public class ManagerTiempo : MonoBehaviour {
 		if(timer >= tpoActualizacion && tpoSesion >= sliderTiempo.minValue){
 			tpoSesion -= tpoActualizacion;
 			sliderTiempo.value -= tpoActualizacion;
-			Debug.Log(tpoSesion);
 			timer = 0;
 		} else if(tpoSesion <= sliderTiempo.minValue){
 			FinalSesion();
@@ -32,6 +31,6 @@ public class ManagerTiempo : MonoBehaviour {
 	}
 
 	void FinalSesion(){
-		Debug.Log ("Final de la sesion");
+		Debug.Log("Finalizo la sesion");
 	}
 }

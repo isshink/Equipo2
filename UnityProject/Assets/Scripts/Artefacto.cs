@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Artefacto : MonoBehaviour {
 	// Declaracion de variables
@@ -11,14 +12,16 @@ public class Artefacto : MonoBehaviour {
 	public bool tieneTip = false;
 	public bool encendido = true;
 	public bool interactivo = true;
-	public bool activoMision = true;
+	public bool activoMision = false;
 	public bool activoNivel = true;
 	public Material artefactoApagado;
 	private Material artefactoEncendido;
+	public Sprite spriteArtefacto; // Sprites (tarjetas) que refieren al artefacto
 	
 	// Use this for initialization
 	void Awake () {
 		artefactoEncendido = GetComponent<Renderer>().material;
+		spriteArtefacto = Resources.Load<Sprite>("sprites/" + gameObject.name);
 	}
 	
 	// Update is called once per frame
@@ -39,7 +42,6 @@ public class Artefacto : MonoBehaviour {
 		if(interactivo && encendido){
 			encendido = false;
 			gameObject.GetComponent<Renderer>().material = artefactoApagado;
-			Debug.Log("Apagado");
 		}
 	}
 
@@ -47,7 +49,6 @@ public class Artefacto : MonoBehaviour {
 		if(interactivo && !encendido){
 			encendido = true;
 			gameObject.GetComponent<Renderer>().material = artefactoEncendido;
-			Debug.Log("Encendido");
 		}
 	}
 
