@@ -6,13 +6,10 @@ public class Camara : MonoBehaviour {
     public int cantHabHorizontal;
     public Vector3[] coordenadasDeCamara;
     public Vector3 coordCamara;
-    public Vector3[] coordenadasDeCamaraHorizontal;
-    public Vector3[] coordenadasDeCamaraVertical;
     private bool translacionVertical = false;
     private bool translacionHorizontal = false;
     private float tiempo = 0;
-    private int habitacionVertical = 0;
-    private int habitacionHorizontal = 0;
+
     // Swipe
     private Vector3 startPos = Vector3.zero;
 	private Vector3 endPos = Vector3.zero;
@@ -29,27 +26,11 @@ public class Camara : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
-                habitacionVertical++;
-                if (habitacionVertical > cantHabVertical - 1)
-                    habitacionVertical = 0;
-                translacionVertical = true;
+
             }
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                habitacionVertical--;
-                if (habitacionVertical < 0)
-                    habitacionVertical = cantHabVertical - 1;
-                translacionVertical = true;
-            }
-            if (translacionVertical)
-            {
-                tiempo += Time.deltaTime;
-                transform.position = Vector3.Lerp(transform.position, coordenadasDeCamara[habitacionVertical], tiempo);
-                if (transform.position == coordenadasDeCamara[habitacionVertical])
-                {
-                    tiempo = 0;
-                    translacionVertical = false;
-                }
+
             }
         }
 
@@ -84,21 +65,19 @@ public class Camara : MonoBehaviour {
     {
         if (angleDegrees > -45 && angleDegrees < 45)
         {
-            // derecha
-            if (habitacionHorizontal < cantHabHorizontal - 1)
+            // izquierda
+            if (contPosX > 0)
             {
-                //habitacionHorizontal++;
-                contPosX++;
+                contPosX--;
                 translacionHorizontal = true;
             }
         }
         else if ((angleDegrees > 135 && angleDegrees < 180) || (angleDegrees < -135 && angleDegrees > -180))
         {
-            // izquierda
-            if (habitacionHorizontal >= cantHabHorizontal - 1)
+            // derecha
+            if (contPosX < cantHabHorizontal - 1)
             {
-                //habitacionHorizontal--;
-                contPosX--;
+                contPosX++;
                 translacionHorizontal = true;
             }
         }
@@ -107,21 +86,19 @@ public class Camara : MonoBehaviour {
     {
         if (angleDegrees > 45 && angleDegrees < 135)
         {
-            // arriba
-            if (habitacionVertical < cantHabVertical - 1)
+            // abajo
+            if (contPosY > 0)
             {
-                //habitacionVertical++;
-                contPosY++;
+                contPosY--;
                 translacionVertical = true;
             }
         }
         else if (angleDegrees < -45 && angleDegrees > -135)
         {
-            // abajo
-            if (habitacionVertical >= cantHabVertical - 1)
+            // arriba
+            if (contPosY < cantHabVertical - 1)
             {
-                //habitacionVertical--;
-                contPosY--;
+                contPosY++;
                 translacionVertical = true;
             }
         }
@@ -133,14 +110,6 @@ public class Camara : MonoBehaviour {
             tiempo += Time.deltaTime;
             coordCamara.Set(posX[contPosX], posY[contPosY], posZ);
             transform.position = Vector3.Lerp(transform.position, coordCamara, tiempo);
-            //transform.position = Vector3.Lerp(transform.position, coordenadasDeCamaraVertical[habitacionVertical], tiempo);
-            /*
-            if (transform.position == coordenadasDeCamaraVertical[habitacionVertical])
-            {
-                tiempo = 0;
-                translacionVertical = false;
-            }
-            */
             if (transform.position == coordCamara)
             {
                 tiempo = 0;
@@ -150,8 +119,9 @@ public class Camara : MonoBehaviour {
         else if (translacionHorizontal)
         {
             tiempo += Time.deltaTime;
-            transform.position = Vector3.Lerp(transform.position, coordenadasDeCamaraHorizontal[habitacionHorizontal], tiempo);
-            if (transform.position == coordenadasDeCamaraHorizontal[habitacionHorizontal])
+            coordCamara.Set(posX[contPosX], posY[contPosY], posZ);
+            transform.position = Vector3.Lerp(transform.position, coordCamara, tiempo);
+            if (transform.position == coordCamara)
             {
                 tiempo = 0;
                 translacionHorizontal = false;
