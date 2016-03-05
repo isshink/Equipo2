@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class VolverMenu : MonoBehaviour {
+public class VolverMenu : MonoBehaviour
+{
 
-	public void RegresarMenu(){
-		Application.LoadLevel("MapaNiveles");
-	}
+    public void RegresarMenu()
+    {
+        SceneManager.LoadScene("MapaNiveles");
+    }
 }

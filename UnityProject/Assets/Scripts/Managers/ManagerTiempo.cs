@@ -7,20 +7,21 @@ public class ManagerTiempo : MonoBehaviour {
 	private float timer = 0;
 	public float tpoSesion = 60; // Segundos
 	public float tpoActualizacion = 1; // Cuantos segundos se descuentan por vez
-	private VerificarLogros verificaLogros;
+    private GameObject managerLogros;
 
 	// Use this for initialization
 	void Awake () {
 		sliderTiempo = GameObject.Find("SliderTiempo").GetComponent<Slider>();
 		sliderTiempo.maxValue = tpoSesion;
-		verificaLogros = GameObject.FindObjectOfType<VerificarLogros>();
+        managerLogros = GameObject.Find("ManagerLogros");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		ActualizaTiempoSesion();
 
-		if(tpoSesion <= 0){
+        if (tpoSesion <= 0 || Input.GetKeyDown(KeyCode.G))
+        {
 			FinalizarSesion();
 		}
 	}
@@ -35,7 +36,8 @@ public class ManagerTiempo : MonoBehaviour {
 	}
 
 	void FinalizarSesion(){
-		verificaLogros.VerificaLogros();
-		Application.LoadLevel("Logros");
+        managerLogros.GetComponent<VerificarLogros>().VerificaLogros();
+        managerLogros.GetComponent<MostrarLogros>().ActivarPanelLogros();
+        managerLogros.GetComponent<MostrarLogros>().MarcarEstrellas();
 	}
 }

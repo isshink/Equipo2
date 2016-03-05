@@ -7,6 +7,7 @@ public class ManagerArtefactos : MonoBehaviour {
 	private Slider sliderConsumo;
 	private Text textConsumo;
 	public int consumoTotal = 0;
+    private int maxConsumoNivel = 0;
 	private float timer = 0;
 	public float tpoActualizacion = 0.5f; // Cada cuanto tiempo actualiza barra consumo
 	private float timerEncRnd = 0;
@@ -30,6 +31,11 @@ public class ManagerArtefactos : MonoBehaviour {
 
 	void Start(){
 		imageCanvas.gameObject.SetActive(false);
+        foreach (Artefacto item in listaArtefactos)
+        {
+            maxConsumoNivel += item.consumoArtefacto;
+        }
+        sliderConsumo.maxValue = maxConsumoNivel;
 	}
 	
 	// Update is called once per frame

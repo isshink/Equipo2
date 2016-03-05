@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class VerificarLogros : MonoBehaviour {
 	private ManagerTiempo tiempoNivel;
 	private ManagerArtefactos consumoNivel;
 	private Mision[] misionesNivel;
 	private Nivel nivelJugado;
-	public static bool logroMisiones = false;
-	public static bool logroConsumo = false;
-	public static bool logroJugarNivel = false;
+	public bool logroMisiones = false;
+	public bool logroConsumo = false;
+	public bool logroJugarNivel = false;
 	private int totalMisionesLogradas = 0;
 
 	void Awake(){

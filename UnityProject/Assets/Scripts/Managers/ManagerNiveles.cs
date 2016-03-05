@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class ManagerNiveles : MonoBehaviour {
 	// Declaracion de variables
@@ -10,11 +10,11 @@ public class ManagerNiveles : MonoBehaviour {
 	public Nivel[] niveles; 
 	
 	void Awake(){
-		if(instance == null){
+		if(instance == null)
 			instance = this;
-		}else{
+		else
 			Destroy(gameObject);
-		}
+		
 		DontDestroyOnLoad(gameObject);
 		niveles = GameObject.FindObjectsOfType<Nivel>();
 	}
@@ -24,7 +24,7 @@ public class ManagerNiveles : MonoBehaviour {
 	}
 
 	void ActivarNivel(){
-		nombreNivelActivo = Application.loadedLevelName;
+        nombreNivelActivo = SceneManager.GetActiveScene().name;
 		switch (nombreNivelActivo) {
 		case "KameHouse":
 			niveles[0].nivelActivo = true;

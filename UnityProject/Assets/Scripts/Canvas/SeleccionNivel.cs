@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public class SeleccionNivel : MonoBehaviour {
+public class SeleccionNivel : MonoBehaviour
+{
 	public Button[] botonesNiveles;
 	private string nombreBotonSeleccionado;
 	private string nombreNivelSeleccionado;
@@ -21,6 +23,6 @@ public class SeleccionNivel : MonoBehaviour {
 			nombreNivelSeleccionado = "KameHouse";
 			break;
 		}
-		Application.LoadLevel(nombreNivelSeleccionado);
+		SceneManager.LoadScene(nombreNivelSeleccionado);
 	}
 }
