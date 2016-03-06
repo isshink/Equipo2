@@ -1,10 +1,11 @@
-Game Design
-Nombre Apellido
+﻿Game Design
+Alejandro Bouchard
 
 Progamming
-Pepe Popu
-Popo Pepe
+Germán Caíno
+David Dascanio
+Sebastián Streitenberger
 
 2D Art
-Nombre Apellido
+Sebastián Dominguez
 

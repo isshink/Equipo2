@@ -6,8 +6,8 @@ public class Camara : MonoBehaviour {
     public int cantHabHorizontal;
     public Vector3[] coordenadasDeCamara;
     public Vector3 coordCamara;
-    private bool translacionVertical = false;
-    private bool translacionHorizontal = false;
+    private bool traslacionVertical = false;
+    private bool traslacionHorizontal = false;
     private float tiempo = 0;
 
     // Swipe
@@ -58,7 +58,7 @@ public class Camara : MonoBehaviour {
                 DesplazamientoVertical(angleDegrees);
             }
         }
-        Translacion();
+        Traslacion();
     }
 
     void DesplazamientoHorizontal(float angleDegrees)
@@ -69,7 +69,7 @@ public class Camara : MonoBehaviour {
             if (contPosX > 0)
             {
                 contPosX--;
-                translacionHorizontal = true;
+                traslacionHorizontal = true;
             }
         }
         else if ((angleDegrees > 135 && angleDegrees < 180) || (angleDegrees < -135 && angleDegrees > -180))
@@ -78,7 +78,7 @@ public class Camara : MonoBehaviour {
             if (contPosX < cantHabHorizontal - 1)
             {
                 contPosX++;
-                translacionHorizontal = true;
+                traslacionHorizontal = true;
             }
         }
     }
@@ -90,7 +90,7 @@ public class Camara : MonoBehaviour {
             if (contPosY > 0)
             {
                 contPosY--;
-                translacionVertical = true;
+                traslacionVertical = true;
             }
         }
         else if (angleDegrees < -45 && angleDegrees > -135)
@@ -99,13 +99,13 @@ public class Camara : MonoBehaviour {
             if (contPosY < cantHabVertical - 1)
             {
                 contPosY++;
-                translacionVertical = true;
+                traslacionVertical = true;
             }
         }
     }
-    void Translacion()
+    void Traslacion()
     {
-        if (translacionVertical)
+        if (traslacionVertical)
         {
             tiempo += Time.deltaTime;
             coordCamara.Set(posX[contPosX], posY[contPosY], posZ);
@@ -113,10 +113,10 @@ public class Camara : MonoBehaviour {
             if (transform.position == coordCamara)
             {
                 tiempo = 0;
-                translacionVertical = false;
+                traslacionVertical = false;
             }
         }
-        else if (translacionHorizontal)
+        else if (traslacionHorizontal)
         {
             tiempo += Time.deltaTime;
             coordCamara.Set(posX[contPosX], posY[contPosY], posZ);
@@ -124,7 +124,7 @@ public class Camara : MonoBehaviour {
             if (transform.position == coordCamara)
             {
                 tiempo = 0;
-                translacionHorizontal = false;
+                traslacionHorizontal = false;
             }
         }
     }

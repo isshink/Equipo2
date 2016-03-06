@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/Scenes/GriffinHouse.unity
   - enabled: 1
     path: Assets/Scenes/SimpsonHouse.unity
+  - enabled: 1
+    path: Assets/Scenes/In-Game.unity
