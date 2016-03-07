@@ -8,6 +8,7 @@ public class ManagerTiempo : MonoBehaviour {
 	public float tpoSesion = 60; // Segundos
 	public float tpoActualizacion = 1; // Cuantos segundos se descuentan por vez
     private GameObject managerLogros;
+    private bool finalizoSesion = false;
 
 	// Use this for initialization
 	void Awake () {
@@ -20,7 +21,7 @@ public class ManagerTiempo : MonoBehaviour {
 	void Update () {
 		ActualizaTiempoSesion();
 
-        if (tpoSesion <= 0 || Input.GetKeyDown(KeyCode.G))
+        if ((tpoSesion <= 0 || Input.GetKeyDown(KeyCode.G)) && !finalizoSesion)
         {
 			FinalizarSesion();
 		}
@@ -39,5 +40,6 @@ public class ManagerTiempo : MonoBehaviour {
         managerLogros.GetComponent<VerificarLogros>().VerificaLogros();
         managerLogros.GetComponent<MostrarLogros>().ActivarPanelLogros();
         managerLogros.GetComponent<MostrarLogros>().MarcarEstrellas();
+        finalizoSesion = true;
 	}
 }

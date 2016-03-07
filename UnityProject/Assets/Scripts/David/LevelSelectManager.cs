@@ -10,21 +10,19 @@ public class LevelSelectManager : MonoBehaviour {
     private int minCantLogrosDesbloqueo = 2;
     public int cantNiveles = 3;
 
-    void Awake () {
-        string key = "";
-        for (int i = 1; i < botones.Length -1; i++)
-        {
-            key = "starslvl0" + i.ToString();
-            DesbloqueaNivel(key, botones[i]);
-        }
-    }
     void Start()
     {
         string key = "";
-        for (int i = 1; i < cantNiveles; i++)
+        for (int i = 1; i <= cantNiveles; i++)
         {
             key = "starslvl0" + i.ToString();
             RellenaLogro(key, Color.yellow);
+        }
+
+        for (int i = 1; i < botones.Length; i++)
+        {
+            key = "starslvl0" + i.ToString();
+            DesbloqueaNivel(key, botones[i]);
         }
     }
     void DesbloqueaNivel(string key, Button boton)
@@ -36,7 +34,12 @@ public class LevelSelectManager : MonoBehaviour {
     }
     void RellenaLogro(string key, Color color) {
         for (int i = 0; i < PlayerPrefs.GetInt(key); i++){
-            estrellasLvl1[i].color = color;
+            if (key == "starslvl01")
+                estrellasLvl1[i].color = color;
+            else if(key == "starslvl02")
+                estrellasLvl2[i].color = color;
+            else if(key == "starslvl03")
+                estrellasLvl3[i].color = color;
         }
     }
 	public void PrimeraCasa()
@@ -54,7 +57,7 @@ public class LevelSelectManager : MonoBehaviour {
     public void ResetearLogros() {
         string key = "";
         Color color = new Color(1f, 1f, 1f);
-        for (int i = 1; i < cantNiveles; i++)
+        for (int i = 1; i <= cantNiveles; i++)
         {
             key = "starslvl0" + i.ToString();
             RellenaLogro(key, color);
@@ -62,8 +65,7 @@ public class LevelSelectManager : MonoBehaviour {
 
         PlayerPrefs.DeleteAll();
 
-        key = "";
-        for (int i = 1; i < botones.Length - 1; i++)
+        for (int i = 1; i < botones.Length; i++)
         {
             key = "starslvl0" + i.ToString();
             DesbloqueaNivel(key, botones[i]);

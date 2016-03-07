@@ -1466,6 +1466,9 @@ GameObject:
   - 4: {fileID: 427402}
   - 33: {fileID: 3399722}
   - 23: {fileID: 2307778}
+  - 65: {fileID: 6534262}
+  - 114: {fileID: 11449818}
+  - 114: {fileID: 11489574}
   m_Layer: 0
   m_Name: Art.Horno
   m_TagString: Artefacto
@@ -4318,7 +4321,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.381, y: 0, z: 0.165}
+  m_LocalPosition: {x: 3.146, y: -0, z: 0.241}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 496196}
@@ -4605,8 +4608,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187364}
-  m_LocalRotation: {x: 0.000000115202326, y: -0.7071067, z: -0.7071068, w: -0.00000011520231}
-  m_LocalPosition: {x: -9.951, y: 2.8400002, z: 0.6}
+  m_LocalRotation: {x: 0.7069844, y: 0, z: 0, w: -0.7072292}
+  m_LocalPosition: {x: -3.472, y: 2.8400002, z: 0.6}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 482976}
@@ -9173,7 +9176,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04095825, y: 0.15687346, z: 0.27340788}
+  m_Size: {x: 0.04095825, y: 0.34, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6515262
 BoxCollider:
@@ -9185,7 +9188,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04095825, y: 0.15687346, z: 0.27340788}
+  m_Size: {x: 0.04095825, y: 0.34, z: 0.42}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6516478
 BoxCollider:
@@ -9221,7 +9224,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04095825, y: 0.15687346, z: 0.27340788}
+  m_Size: {x: 0.04095825, y: 0.33, z: 0.42}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6529896
 BoxCollider:
@@ -9247,6 +9250,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.39078897, y: 0.3968176, z: 0.5806687}
   m_Center: {x: -0.00000021606684, y: 0.00000006705524, z: 0}
+--- !u!65 &6534262
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.074745, y: 0.9895657, z: 1.038857}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6536282
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -9281,7 +9296,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04095825, y: 0.15687346, z: 0.27340788}
+  m_Size: {x: 0.04095825, y: 0.31, z: 0.42}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6548022
 BoxCollider:
@@ -9317,7 +9332,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04095825, y: 0.15687346, z: 0.27340788}
+  m_Size: {x: 0.04095825, y: 0.37, z: 0.38}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6556702
 BoxCollider:
@@ -9329,7 +9344,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04095825, y: 0.15687346, z: 0.27340788}
+  m_Size: {x: 0.04095825, y: 0.4, z: 0.42}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6558722
 BoxCollider:
@@ -9365,7 +9380,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04095825, y: 0.15687345, z: 0.27340788}
+  m_Size: {x: 0.04095825, y: 0.34, z: 0.39}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6562606
 BoxCollider:
@@ -9389,7 +9404,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04095825, y: 0.15687346, z: 0.27340788}
+  m_Size: {x: 0.04095825, y: 0.59, z: 0.39}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6565612
 BoxCollider:
@@ -9425,7 +9440,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04095825, y: 0.15687346, z: 0.27340788}
+  m_Size: {x: 0.04095825, y: 0.31, z: 0.39}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6578016
 BoxCollider:
@@ -10090,6 +10105,19 @@ MonoBehaviour:
   spriteArtefacto: {fileID: 0}
   audioEncendido: {fileID: 0}
   audioApagado: {fileID: 8300000, guid: 8ddd827787e25074c8448652a7c1734e, type: 3}
+--- !u!114 &11449818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa82ce8cb28c3247ba754cb34bc313b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  encendido: 0
+  materialEncendido: {fileID: 2100000, guid: c90d08baeefb7cb47a49975dde49e989, type: 2}
 --- !u!114 &11452358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10454,6 +10482,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encendido: 0
   materialEncendido: {fileID: 2100000, guid: c90d08baeefb7cb47a49975dde49e989, type: 2}
+--- !u!114 &11489574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bea183906a67c2e488f487772c19a02a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombreArtefacto: "Horno El\xE9ctrico"
+  consumoArtefacto: 150
+  consumoActual: 0
+  sinConsumo: 0
+  descripcionTip: 
+  consumoFacturado: 0
+  tieneTip: 0
+  encendido: 1
+  interactivo: 1
+  activoMision: 0
+  activoNivel: 1
+  artefactoApagado: {fileID: 2100000, guid: c90d08baeefb7cb47a49975dde49e989, type: 2}
+  spriteArtefacto: {fileID: 0}
+  audioEncendido: {fileID: 0}
+  audioApagado: {fileID: 0}
 --- !u!114 &11493204
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -43,14 +43,13 @@ public class MostrarLogros : MonoBehaviour
 
     public void MarcarEstrellas() { 
         if(estrellas == 0 && verificarLogros.logroJugarNivel)
-            estrellas++;
+            estrellas = 1;
         if(estrellas == 1 && verificarLogros.logroConsumo)
-            estrellas++;
-        if((estrellas == 1 || estrellas == 2) && verificarLogros.logroMisiones)
-            estrellas++;
-
-        if (estrellas > 3)
+            estrellas = 2;
+        if ((estrellas == 2) && verificarLogros.logroMisiones)
             estrellas = 3;
+        else if (estrellas == 1 && verificarLogros.logroMisiones)
+            estrellas = 2;
 
         if (estrellas > PlayerPrefs.GetInt(stringKey)){
             PlayerPrefs.SetInt(stringKey, estrellas);

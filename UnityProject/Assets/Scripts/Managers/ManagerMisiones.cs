@@ -3,7 +3,7 @@
 public class ManagerMisiones : MonoBehaviour {
 	// Declaracion de varialbes
 	public Mision[] misiones;
-	public int totalMisionesActivas = 3;
+	public int totalMisionesActivas = 1;
 	private int indiceMisionActiva = 0;
 
 	// Use this for initialization
