@@ -31,7 +31,7 @@ GameObject:
   - 114: {fileID: 11496772}
   - 114: {fileID: 11441872}
   m_Layer: 0
-  m_Name: Horno1 (1)
+  m_Name: Art.Horno
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ GameObject:
   - 65: {fileID: 6502410}
   - 114: {fileID: 11445136}
   m_Layer: 0
-  m_Name: Interruptor1 (4)
+  m_Name: Art.Interruptor
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +156,7 @@ GameObject:
   - 65: {fileID: 6527574}
   - 114: {fileID: 11455204}
   m_Layer: 0
-  m_Name: Microhondas1 (1)
+  m_Name: Art.Microondas
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,7 +210,7 @@ GameObject:
   - 65: {fileID: 6546396}
   - 114: {fileID: 11451646}
   m_Layer: 0
-  m_Name: Heladera1 (1)
+  m_Name: Art.Heladera
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,7 +230,7 @@ GameObject:
   - 65: {fileID: 6570620}
   - 114: {fileID: 11481466}
   m_Layer: 0
-  m_Name: Television2 (2)
+  m_Name: Art.TV
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,7 +284,7 @@ GameObject:
   - 65: {fileID: 6599968}
   - 114: {fileID: 11463336}
   m_Layer: 0
-  m_Name: Interruptor1 (5)
+  m_Name: Art.Interruptor
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,7 +320,7 @@ GameObject:
   - 65: {fileID: 6507278}
   - 114: {fileID: 11429930}
   m_Layer: 0
-  m_Name: Parlantes1 (1)
+  m_Name: Art.Parlantes
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -507,7 +507,7 @@ GameObject:
   - 65: {fileID: 6597994}
   - 114: {fileID: 11480498}
   m_Layer: 0
-  m_Name: Television2 (1)
+  m_Name: Art.TV
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -629,7 +629,7 @@ GameObject:
   - 65: {fileID: 6505508}
   - 114: {fileID: 11489068}
   m_Layer: 0
-  m_Name: Computadora1 (1)
+  m_Name: Art.Computadora
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -649,7 +649,7 @@ GameObject:
   - 65: {fileID: 6511498}
   - 114: {fileID: 11453306}
   m_Layer: 0
-  m_Name: Interruptor1 (2)
+  m_Name: Art.Interruptor
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -703,7 +703,7 @@ GameObject:
   - 65: {fileID: 6590078}
   - 114: {fileID: 11411228}
   m_Layer: 0
-  m_Name: Velador1 (1)
+  m_Name: Art.Velador
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -740,7 +740,7 @@ GameObject:
   - 65: {fileID: 6559046}
   - 114: {fileID: 11434386}
   m_Layer: 0
-  m_Name: Interruptor1 (3)
+  m_Name: Art.Interruptor
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -845,7 +845,7 @@ GameObject:
   - 65: {fileID: 6528768}
   - 114: {fileID: 11472526}
   m_Layer: 0
-  m_Name: Interruptor1 (1)
+  m_Name: Art.Interruptor
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1301,7 +1301,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.195, y: -0, z: 0.237}
+  m_LocalPosition: {x: 3.25, y: 0, z: 0.107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400358}
@@ -1801,7 +1801,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.114, y: -0, z: 0.402}
+  m_LocalPosition: {x: 2.114, y: -0, z: 0.125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 471462}
@@ -4263,7 +4263,7 @@ Halo:
   m_Color:
     serializedVersion: 2
     rgba: 4282677884
-  m_Size: 1.53
+  m_Size: 1.47
 --- !u!122 &12242520
 Halo:
   m_ObjectHideFlags: 1
@@ -4292,11 +4292,11 @@ Halo:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187172}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Color:
     serializedVersion: 2
     rgba: 4282677884
-  m_Size: 1.52
+  m_Size: 1.46
 --- !u!122 &12282696
 Halo:
   m_ObjectHideFlags: 1

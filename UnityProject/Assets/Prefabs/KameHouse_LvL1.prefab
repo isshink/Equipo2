@@ -48,7 +48,7 @@ GameObject:
   - 114: {fileID: 11494746}
   - 114: {fileID: 11420412}
   m_Layer: 0
-  m_Name: Interruptor1 (2)
+  m_Name: Art.Interruptor
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ GameObject:
   - 114: {fileID: 11440436}
   - 114: {fileID: 11444300}
   m_Layer: 0
-  m_Name: 'Velador1 '
+  m_Name: Art.Velador
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,7 +105,7 @@ GameObject:
   - 114: {fileID: 11404264}
   - 82: {fileID: 8230032}
   m_Layer: 0
-  m_Name: 'Television1 '
+  m_Name: Art.TV
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -445,7 +445,7 @@ GameObject:
   - 114: {fileID: 11409892}
   - 82: {fileID: 8284822}
   m_Layer: 0
-  m_Name: 'Heladera1 '
+  m_Name: Art.Heladera
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -499,7 +499,7 @@ GameObject:
   - 114: {fileID: 11495088}
   - 114: {fileID: 11497780}
   m_Layer: 0
-  m_Name: 'Horno1 '
+  m_Name: Art.Horno
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -519,7 +519,7 @@ GameObject:
   - 114: {fileID: 11458064}
   - 114: {fileID: 11459254}
   m_Layer: 0
-  m_Name: 'LamparaPie1 '
+  m_Name: Art.LamparaPie
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,7 +539,7 @@ GameObject:
   - 114: {fileID: 11469452}
   - 114: {fileID: 11454566}
   m_Layer: 0
-  m_Name: 'Interruptor1 '
+  m_Name: Art.Interruptor
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -593,7 +593,7 @@ GameObject:
   - 114: {fileID: 11413954}
   - 82: {fileID: 8246590}
   m_Layer: 0
-  m_Name: 'Microhondas1 '
+  m_Name: Art.Microondas
   m_TagString: Artefacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -644,7 +644,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 7
+  m_RootOrder: 2
 --- !u!4 &403428
 Transform:
   m_ObjectHideFlags: 1
@@ -656,7 +656,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 6
+  m_RootOrder: 11
 --- !u!4 &411432
 Transform:
   m_ObjectHideFlags: 1
@@ -668,7 +668,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 5
+  m_RootOrder: 10
 --- !u!4 &411800
 Transform:
   m_ObjectHideFlags: 1
@@ -717,7 +717,7 @@ Transform:
   m_Children:
   - {fileID: 476190}
   m_Father: {fileID: 462558}
-  m_RootOrder: 12
+  m_RootOrder: 3
 --- !u!4 &415044
 Transform:
   m_ObjectHideFlags: 1
@@ -730,7 +730,7 @@ Transform:
   m_Children:
   - {fileID: 431192}
   m_Father: {fileID: 462558}
-  m_RootOrder: 28
+  m_RootOrder: 5
 --- !u!4 &419482
 Transform:
   m_ObjectHideFlags: 1
@@ -742,7 +742,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 8
+  m_RootOrder: 12
 --- !u!4 &420762
 Transform:
   m_ObjectHideFlags: 1
@@ -767,7 +767,7 @@ Transform:
   m_Children:
   - {fileID: 465524}
   m_Father: {fileID: 462558}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &430660
 Transform:
   m_ObjectHideFlags: 1
@@ -779,7 +779,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 29
+  m_RootOrder: 28
 --- !u!4 &431192
 Transform:
   m_ObjectHideFlags: 1
@@ -787,7 +787,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.996, y: 2.867, z: 1.164}
+  m_LocalPosition: {x: 2.996, y: 2.867, z: 0.094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 415044}
@@ -803,7 +803,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 0
+  m_RootOrder: 30
 --- !u!4 &436912
 Transform:
   m_ObjectHideFlags: 1
@@ -816,7 +816,7 @@ Transform:
   m_Children:
   - {fileID: 495432}
   m_Father: {fileID: 462558}
-  m_RootOrder: 13
+  m_RootOrder: 4
 --- !u!4 &439454
 Transform:
   m_ObjectHideFlags: 1
@@ -852,7 +852,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 30
+  m_RootOrder: 29
 --- !u!4 &445696
 Transform:
   m_ObjectHideFlags: 1
@@ -864,7 +864,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 4
+  m_RootOrder: 9
 --- !u!4 &450032
 Transform:
   m_ObjectHideFlags: 1
@@ -899,22 +899,22 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 435002}
   - {fileID: 430634}
   - {fileID: 482840}
+  - {fileID: 400126}
+  - {fileID: 415026}
+  - {fileID: 436912}
+  - {fileID: 415044}
   - {fileID: 468960}
+  - {fileID: 477808}
+  - {fileID: 495832}
   - {fileID: 445696}
   - {fileID: 411432}
   - {fileID: 403428}
-  - {fileID: 400126}
   - {fileID: 419482}
   - {fileID: 495956}
   - {fileID: 490730}
   - {fileID: 498174}
-  - {fileID: 415026}
-  - {fileID: 436912}
-  - {fileID: 477808}
-  - {fileID: 495832}
   - {fileID: 414302}
   - {fileID: 461188}
   - {fileID: 443136}
@@ -927,9 +927,9 @@ Transform:
   - {fileID: 411800}
   - {fileID: 471822}
   - {fileID: 439454}
-  - {fileID: 415044}
   - {fileID: 430660}
   - {fileID: 444164}
+  - {fileID: 435002}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &465524
@@ -955,7 +955,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 3
+  m_RootOrder: 6
 --- !u!4 &471822
 Transform:
   m_ObjectHideFlags: 1
@@ -991,7 +991,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 14
+  m_RootOrder: 7
 --- !u!4 &480836
 Transform:
   m_ObjectHideFlags: 1
@@ -1015,7 +1015,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &490730
 Transform:
   m_ObjectHideFlags: 1
@@ -1027,7 +1027,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 10
+  m_RootOrder: 14
 --- !u!4 &491404
 Transform:
   m_ObjectHideFlags: 1
@@ -1075,7 +1075,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 15
+  m_RootOrder: 8
 --- !u!4 &495956
 Transform:
   m_ObjectHideFlags: 1
@@ -1087,7 +1087,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 9
+  m_RootOrder: 13
 --- !u!4 &498174
 Transform:
   m_ObjectHideFlags: 1
@@ -1099,7 +1099,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462558}
-  m_RootOrder: 11
+  m_RootOrder: 15
 --- !u!23 &2302100
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -2193,8 +2193,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0639017, y: 1.0949373, z: 3.1223776}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.8, y: 1.06, z: 0.87}
+  m_Center: {x: 0.04, y: 0, z: -1.11}
 --- !u!65 &6596042
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2516,7 +2516,7 @@ MonoBehaviour:
   activoMision: 0
   activoNivel: 1
   artefactoApagado: {fileID: 2100000, guid: c90d08baeefb7cb47a49975dde49e989, type: 2}
-  spriteArtefacto: {fileID: 0}
+  spriteArtefacto: {fileID: 21300000, guid: d19cb72f50bb4644994de311a0ab1333, type: 3}
   audioEncendido: {fileID: 0}
   audioApagado: {fileID: 8300000, guid: 8ddd827787e25074c8448652a7c1734e, type: 3}
 --- !u!114 &11444300
@@ -2555,7 +2555,7 @@ MonoBehaviour:
   activoMision: 0
   activoNivel: 1
   artefactoApagado: {fileID: 2100000, guid: c90d08baeefb7cb47a49975dde49e989, type: 2}
-  spriteArtefacto: {fileID: 0}
+  spriteArtefacto: {fileID: 21300000, guid: 5c6bab0b4a4407c419da7e591db339a2, type: 3}
   audioEncendido: {fileID: 8300000, guid: 42732c1d7a18e454fb8f5b9bc3770bd9, type: 3}
   audioApagado: {fileID: 0}
 --- !u!114 &11454566
@@ -2594,7 +2594,7 @@ MonoBehaviour:
   activoMision: 0
   activoNivel: 1
   artefactoApagado: {fileID: 2100000, guid: c90d08baeefb7cb47a49975dde49e989, type: 2}
-  spriteArtefacto: {fileID: 0}
+  spriteArtefacto: {fileID: 21300000, guid: d19cb72f50bb4644994de311a0ab1333, type: 3}
   audioEncendido: {fileID: 0}
   audioApagado: {fileID: 8300000, guid: 8ddd827787e25074c8448652a7c1734e, type: 3}
 --- !u!114 &11459254
@@ -2633,7 +2633,7 @@ MonoBehaviour:
   activoMision: 0
   activoNivel: 1
   artefactoApagado: {fileID: 2100000, guid: c90d08baeefb7cb47a49975dde49e989, type: 2}
-  spriteArtefacto: {fileID: 0}
+  spriteArtefacto: {fileID: 21300000, guid: d19cb72f50bb4644994de311a0ab1333, type: 3}
   audioEncendido: {fileID: 0}
   audioApagado: {fileID: 8300000, guid: 8ddd827787e25074c8448652a7c1734e, type: 3}
 --- !u!114 &11483340
@@ -2659,7 +2659,7 @@ MonoBehaviour:
   activoMision: 0
   activoNivel: 1
   artefactoApagado: {fileID: 2100000, guid: c90d08baeefb7cb47a49975dde49e989, type: 2}
-  spriteArtefacto: {fileID: 0}
+  spriteArtefacto: {fileID: 21300000, guid: 6224b61c90bd3204d94d25b54c4e4e67, type: 3}
   audioEncendido: {fileID: 8300000, guid: 792c9bba8b49b904a80caf0eb93432c6, type: 3}
   audioApagado: {fileID: 0}
 --- !u!114 &11494746
@@ -2685,7 +2685,7 @@ MonoBehaviour:
   activoMision: 0
   activoNivel: 1
   artefactoApagado: {fileID: 2100000, guid: c90d08baeefb7cb47a49975dde49e989, type: 2}
-  spriteArtefacto: {fileID: 0}
+  spriteArtefacto: {fileID: 21300000, guid: d19cb72f50bb4644994de311a0ab1333, type: 3}
   audioEncendido: {fileID: 0}
   audioApagado: {fileID: 8300000, guid: 8ddd827787e25074c8448652a7c1734e, type: 3}
 --- !u!114 &11495088
@@ -2724,7 +2724,7 @@ MonoBehaviour:
   activoMision: 0
   activoNivel: 1
   artefactoApagado: {fileID: 2100000, guid: c90d08baeefb7cb47a49975dde49e989, type: 2}
-  spriteArtefacto: {fileID: 0}
+  spriteArtefacto: {fileID: 21300000, guid: 5c6bab0b4a4407c419da7e591db339a2, type: 3}
   audioEncendido: {fileID: 0}
   audioApagado: {fileID: 8300000, guid: 22c6b8ff4ffb3d54b8d928b063635676, type: 3}
 --- !u!114 &11497780
@@ -2750,7 +2750,7 @@ MonoBehaviour:
   activoMision: 0
   activoNivel: 1
   artefactoApagado: {fileID: 2100000, guid: c90d08baeefb7cb47a49975dde49e989, type: 2}
-  spriteArtefacto: {fileID: 0}
+  spriteArtefacto: {fileID: 21300000, guid: 5c6bab0b4a4407c419da7e591db339a2, type: 3}
   audioEncendido: {fileID: 0}
   audioApagado: {fileID: 0}
 --- !u!122 &12228572
@@ -2759,11 +2759,11 @@ Halo:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121456}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Color:
     serializedVersion: 2
     rgba: 4282677884
-  m_Size: 2.75
+  m_Size: 1.51
 --- !u!122 &12230752
 Halo:
   m_ObjectHideFlags: 1

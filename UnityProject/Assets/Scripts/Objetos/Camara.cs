@@ -20,21 +20,23 @@ public class Camara : MonoBehaviour {
     private int contPosY = 0;
     private int contPosX = 0;
 
-    void Update()
-    {
-        if (Application.isWebPlayer)
-        {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-
-            }
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-
-            }
+    void Update(){
+        // Inputs para Desktop y Web
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)){
+            MoverDerecha();
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)){
+            MoverIzquierda();
         }
 
-        // Script Sergio para swipe
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)){
+            MoverAbajo();
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)){
+            MoverArriba();
+        }
+
+        // Inputs para mobile
         if (Input.GetMouseButtonDown(0)){
             startPos = Input.mousePosition;
         }
@@ -51,56 +53,73 @@ public class Camara : MonoBehaviour {
             float angleDegrees = Mathf.Rad2Deg * angle;
 
             if (cantHabHorizontal > 0){
-                DesplazamientoHorizontal(angleDegrees);
+                HorizontalSlide(angleDegrees);
             }
             
             if (cantHabVertical > 0){
-                DesplazamientoVertical(angleDegrees);
+                VerticalSlide(angleDegrees);
             }
         }
+        // Traslación de la cámara
         Traslacion();
     }
 
-    void DesplazamientoHorizontal(float angleDegrees)
+    void HorizontalSlide(float angleDegrees)
     {
         if (angleDegrees > -45 && angleDegrees < 45)
         {
             // izquierda
-            if (contPosX > 0)
-            {
-                contPosX--;
-                traslacionHorizontal = true;
-            }
+            MoverIzquierda();
         }
         else if ((angleDegrees > 135 && angleDegrees < 180) || (angleDegrees < -135 && angleDegrees > -180))
         {
             // derecha
-            if (contPosX < cantHabHorizontal - 1)
-            {
-                contPosX++;
-                traslacionHorizontal = true;
-            }
+            MoverDerecha();
         }
     }
-    void DesplazamientoVertical(float angleDegrees)
+    void VerticalSlide(float angleDegrees)
     {
         if (angleDegrees > 45 && angleDegrees < 135)
         {
             // abajo
-            if (contPosY > 0)
-            {
-                contPosY--;
-                traslacionVertical = true;
-            }
+            MoverAbajo();
         }
         else if (angleDegrees < -45 && angleDegrees > -135)
         {
             // arriba
-            if (contPosY < cantHabVertical - 1)
-            {
-                contPosY++;
-                traslacionVertical = true;
-            }
+            MoverArriba();
+        }
+    }
+    void MoverDerecha()
+    {
+        if (contPosX < cantHabHorizontal - 1)
+        {
+            contPosX++;
+            traslacionHorizontal = true;
+        }
+    }
+    void MoverIzquierda()
+    {
+        if (contPosX > 0)
+        {
+            contPosX--;
+            traslacionHorizontal = true;
+        }
+    }
+    void MoverArriba()
+    {
+        if (contPosY < cantHabVertical - 1)
+        {
+            contPosY++;
+            traslacionVertical = true;
+        }
+    }
+    void MoverAbajo()
+    {
+        if (contPosY > 0)
+        {
+            contPosY--;
+            traslacionVertical = true;
         }
     }
     void Traslacion()

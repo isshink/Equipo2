@@ -3,39 +3,40 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LevelSelectManager : MonoBehaviour {
-    public Button botonLvl2;
-    public Button botonLvl3;
-    public Button botonLvl4;
+    public Button[] botones;
     public Image[] estrellasLvl1;
     public Image[] estrellasLvl2;
     public Image[] estrellasLvl3;
-    public Image[] estrellasLvl4;
+    private int minCantLogrosDesbloqueo = 2;
+    public int cantNiveles = 3;
 
     void Awake () {
-        if (PlayerPrefs.GetInt("starslvl01") >= 2)
-            botonLvl2.interactable = true;
-        if (PlayerPrefs.GetInt("starslvl02") >= 2)
-            botonLvl3.interactable = true;
-        if (PlayerPrefs.GetInt("starslvl03") >= 2)
-            botonLvl4.interactable = true;
+        string key = "";
+        for (int i = 1; i < botones.Length -1; i++)
+        {
+            key = "starslvl0" + i.ToString();
+            DesbloqueaNivel(key, botones[i]);
+        }
     }
     void Start()
     {
-        for (int i=0;i<PlayerPrefs.GetInt("starslvl01");i++)
+        string key = "";
+        for (int i = 1; i < cantNiveles; i++)
         {
-            estrellasLvl1[i].color = Color.yellow;
+            key = "starslvl0" + i.ToString();
+            RellenaLogro(key, Color.yellow);
         }
-        for (int i = 0; i < PlayerPrefs.GetInt("starslvl02"); i++)
-        {
-            estrellasLvl2[i].color = Color.yellow;
-        }
-        for (int i = 0; i < PlayerPrefs.GetInt("starslvl03"); i++)
-        {
-            estrellasLvl3[i].color = Color.yellow;
-        }
-        for (int i = 0; i < PlayerPrefs.GetInt("starslvl04"); i++)
-        {
-            estrellasLvl4[i].color = Color.yellow;
+    }
+    void DesbloqueaNivel(string key, Button boton)
+    {
+        if (PlayerPrefs.GetInt(key) >= minCantLogrosDesbloqueo)
+            boton.interactable = true;
+        else
+            boton.interactable = false;
+    }
+    void RellenaLogro(string key, Color color) {
+        for (int i = 0; i < PlayerPrefs.GetInt(key); i++){
+            estrellasLvl1[i].color = color;
         }
     }
 	public void PrimeraCasa()
@@ -50,9 +51,22 @@ public class LevelSelectManager : MonoBehaviour {
     {
         SceneManager.LoadScene("SimpsonHouse", LoadSceneMode.Single);
     }
-    public void CuartaCasa()
-    {
-        SceneManager.LoadScene("lvl04", LoadSceneMode.Single);
-    }
+    public void ResetearLogros() {
+        string key = "";
+        Color color = new Color(1f, 1f, 1f);
+        for (int i = 1; i < cantNiveles; i++)
+        {
+            key = "starslvl0" + i.ToString();
+            RellenaLogro(key, color);
+        }
 
+        PlayerPrefs.DeleteAll();
+
+        key = "";
+        for (int i = 1; i < botones.Length - 1; i++)
+        {
+            key = "starslvl0" + i.ToString();
+            DesbloqueaNivel(key, botones[i]);
+        }
+    }
 }

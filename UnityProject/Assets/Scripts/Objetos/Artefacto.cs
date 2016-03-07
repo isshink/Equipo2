@@ -26,7 +26,7 @@ public class Artefacto : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		artefactoEncendido = GetComponent<Renderer>().material;
-		spriteArtefacto = Resources.Load<Sprite>("sprites/" + gameObject.name);
+        AsignaImagenArtefacto();
         efectoEncendido = GetComponent<EfectoEncendido>();
         if (GetComponent<AudioSource>() != null)
             audioSource = GetComponent<AudioSource>();
@@ -93,7 +93,7 @@ public class Artefacto : MonoBehaviour {
         if (audioEncendido != null) {
             audioSource.clip = audioEncendido;
             audioSource.Play();
-            audioSource.loop = true;
+            audioSource.loop = false;
         }
     }
 
@@ -108,5 +108,26 @@ public class Artefacto : MonoBehaviour {
             audioSource.loop = false;
             audioSource.clip = null;
         }       
+    }
+
+    void AsignaImagenArtefacto() {
+        string nombreImagen = "";
+        if (gameObject.name == "Art.Interruptor" || gameObject.name == "Art.LamparaPie" || gameObject.name == "Art.Velador")
+            nombreImagen = "PopUpLuz";
+        else if (gameObject.name == "Art.Heladera" || gameObject.name == "Art.Horno" || gameObject.name == "Art.Microondas" || 
+            gameObject.name == "Art.Tostadora" || gameObject.name == "Art.Batidora")
+            nombreImagen = "PopUpComida";
+        else if (gameObject.name == "Art.TV")
+            nombreImagen = "PopUpTV";
+        else if (gameObject.name == "Art.Parlantes")
+            nombreImagen = "PopUpMusica2";
+        else if (gameObject.name == "Art.Computadora")
+            nombreImagen = "PopUpMouse";
+        else if (gameObject.name == "Art.Telefono")
+            nombreImagen = "PopUpTelefono";
+        else
+            nombreImagen = "Exclamacion";
+
+        spriteArtefacto = Resources.Load<Sprite>("sprites/" + nombreImagen);
     }
 }

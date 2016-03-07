@@ -66,7 +66,7 @@ public class EfectoEncendido : MonoBehaviour {
         else
             encendido = false;
 
-        if (encendido)
+        if (encendido && gameObject.name != "Art.Interruptor")
         {
             if (materialEncendido!=null)
                 rend.material = materialEncendido;
@@ -88,7 +88,7 @@ public class EfectoEncendido : MonoBehaviour {
             }
             transform.localScale = escala;
         }
-        else if (apagar)
+        else if (apagar && gameObject.name != "Art.Interruptor")
         {
             escalaApagar += new Vector3(incremento, incremento, incremento) * Time.deltaTime * (velocidadDeEscalado * 6);
             if (transform.localScale.x >= maxValorApagar)
@@ -102,7 +102,7 @@ public class EfectoEncendido : MonoBehaviour {
             }
             transform.localScale = escalaApagar;
         }
-        else if (tambaleo)
+        else if (tambaleo && gameObject.name != "Art.Interruptor")
         {
             if (direccion > 0 && contador==0)
             {
@@ -144,16 +144,4 @@ public class EfectoEncendido : MonoBehaviour {
         direccion = 1;
         apagar = true;
     }
-    /*
-    void OnMouseDown()
-    {
-        if (encendido)
-        {
-            encendido = false;
-            escala = new Vector3(minValor, minValor, minValor);
-            direccion = 1;
-            apagar = true;
-        }
-    }
-    */
 }

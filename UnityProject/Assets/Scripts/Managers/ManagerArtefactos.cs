@@ -7,12 +7,12 @@ public class ManagerArtefactos : MonoBehaviour {
 	private Slider sliderConsumo;
 	private Text textConsumo;
 	public int consumoTotal = 0;
-    private int maxConsumoNivel = 0;
+    public int maxConsumoNivel = 0;
+    public int promConsumoNivel = 0;
 	private float timer = 0;
 	public float tpoActualizacion = 0.5f; // Cada cuanto tiempo actualiza barra consumo
 	private float timerEncRnd = 0;
-	public float tpoEncRndMin = 5; // Cada cuanto tiempo enciende un artefacto (limite min del rango)
-	public float tpoEncRndMax = 15; // Cada cuanto tiempo enciende un artefacto (limite max del rango)
+    public float tpoEncRnd = 5f;
 	private float tpoLimiteParaRnd = 10;
 	private Image imageCanvas; // Referencia al objeto Image del Canvas (para mostrar las tarjetas
 	public float tpoMuestraSprite = 3f; // Segundos que se muestran los avisos de encendidos random
@@ -36,6 +36,7 @@ public class ManagerArtefactos : MonoBehaviour {
             maxConsumoNivel += item.consumoArtefacto;
         }
         sliderConsumo.maxValue = maxConsumoNivel;
+        promConsumoNivel = maxConsumoNivel / 2;
 	}
 	
 	// Update is called once per frame
@@ -47,8 +48,7 @@ public class ManagerArtefactos : MonoBehaviour {
 		}
 
 		timerEncRnd += Time.deltaTime;
-		if(timerEncRnd >= Random.Range(tpoEncRndMin, tpoEncRndMax) &&
-		   managerTiempo.tpoSesion >= tpoLimiteParaRnd){
+		if(timerEncRnd >= tpoEncRnd && managerTiempo.tpoSesion >= tpoLimiteParaRnd){
 			EncendidoRandomArtefactos();
 			timerEncRnd = 0;
 		}
@@ -86,15 +86,11 @@ public class ManagerArtefactos : MonoBehaviour {
 
 	// Enciende de forma aleatoria los artefactos que estan apagados
 	void EncendidoRandomArtefactos(){
-		foreach (Artefacto item in listaArtefactos) {
-			if(item != null){
-				if(!item.encendido){
-					MostrarSpriteArtefacto(item);
-					item.EncenderArtefacto();
-					break;
-				}
-			}
-		}
+        int itemRnd = Random.Range(0, listaArtefactos.Length);
+        if (!listaArtefactos[itemRnd].encendido){
+            MostrarSpriteArtefacto(listaArtefactos[itemRnd]);
+            listaArtefactos[itemRnd].EncenderArtefacto();
+        }
 	}
 
 	// Si el artefacto tiene asociado un sprite, al encenderse se activa

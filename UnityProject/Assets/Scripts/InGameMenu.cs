@@ -29,16 +29,28 @@ public class InGameMenu : MonoBehaviour
 	{
 		pauseButton.SetActive(false);
 		pauseMenu.SetActive(true);
+
+        Time.timeScale = 0;
+        AudioListener.pause = true;
 	}
 
 	public void Unpause ()
 	{
 		pauseButton.SetActive(true);
 		pauseMenu.SetActive(false);
+
+        Time.timeScale = 1;
+        AudioListener.pause = false;
 	}
 	
 	public void ExitToMenu ()
 	{
-		SceneManager.LoadScene(sceneToGoBackTo);
+        Unpause();
+        SceneManager.LoadScene(sceneToGoBackTo);
 	}
+
+    public void Restart() {
+        Unpause();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

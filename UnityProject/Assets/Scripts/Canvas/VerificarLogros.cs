@@ -5,7 +5,7 @@ public class VerificarLogros : MonoBehaviour {
 	private ManagerTiempo tiempoNivel;
 	private ManagerArtefactos consumoNivel;
 	private Mision[] misionesNivel;
-	private Nivel nivelJugado;
+    private ManagerMisiones managerMisiones;
 	public bool logroMisiones = false;
 	public bool logroConsumo = false;
 	public bool logroJugarNivel = false;
@@ -15,7 +15,7 @@ public class VerificarLogros : MonoBehaviour {
 		tiempoNivel = GameObject.FindObjectOfType<ManagerTiempo>();
 		consumoNivel = GameObject.FindObjectOfType<ManagerArtefactos>();
 		misionesNivel = GameObject.FindObjectOfType<ManagerMisiones>().GetComponentsInChildren<Mision>();
-		nivelJugado = GameObject.FindObjectOfType<Nivel>();
+        managerMisiones = GameObject.FindObjectOfType<ManagerMisiones>();
 	}
 
 	public void VerificaLogros(){
@@ -33,7 +33,7 @@ public class VerificarLogros : MonoBehaviour {
 	}
 
 	void VerificaLogroConsumo(){
-		if(consumoNivel.consumoTotal <= nivelJugado.consumoPromNivel){
+		if(consumoNivel.consumoTotal <= consumoNivel.promConsumoNivel){
 			logroConsumo = true;
 		}else{
 			logroConsumo = false;
@@ -49,7 +49,7 @@ public class VerificarLogros : MonoBehaviour {
 			}
 		}
 		
-		if(totalMisionesLogradas == nivelJugado.totalMisionesNivel){
+		if(totalMisionesLogradas == managerMisiones.totalMisionesActivas){
 			logroMisiones = true;
 		}else{
 			logroMisiones = false;

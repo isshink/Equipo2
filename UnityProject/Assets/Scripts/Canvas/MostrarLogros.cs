@@ -46,7 +46,7 @@ public class MostrarLogros : MonoBehaviour
             estrellas++;
         if(estrellas == 1 && verificarLogros.logroConsumo)
             estrellas++;
-        if(estrellas == 2 && verificarLogros.logroMisiones)
+        if((estrellas == 1 || estrellas == 2) && verificarLogros.logroMisiones)
             estrellas++;
 
         if (estrellas > 3)

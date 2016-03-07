@@ -24,7 +24,7 @@ public class Credits : MonoBehaviour
 	{
 		Transform creditTransform = studentsCreditsGameObject.transform;
 
-		TextAsset creditsTextAsset = Resources.Load("Credits") as TextAsset;
+        TextAsset creditsTextAsset = Resources.Load("Credits/Credits") as TextAsset;
 		string creditsText = creditsTextAsset.text;
 		string[] creditTextLines = creditsText.Split('\n');
 
